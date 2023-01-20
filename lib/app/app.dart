@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_list/app/view/home.dart';
 import 'package:to_do_list/app/view/splash_page.dart';
+import 'package:to_do_list/app/view/taskList_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     //Theme Colors.
-    const primaryColor = Color(0xFF40B7AD);
+    const primaryColor = Color(0xFF3498DB);
     const textColor = Color(0xFF4A4A4A);
     const backgroundColor = Color(0xFFF5F5F5);
 
