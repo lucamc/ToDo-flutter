@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:to_do_list/app/view/components/shape.dart';
-import 'package:to_do_list/app/view/components/title-principal.dart';
-import 'package:to_do_list/app/view/task_list/task_list_page.dart';
+import 'package:to_do_list/app/pages/components/shape.dart';
+import 'package:to_do_list/app/pages/components/title-principal.dart';
+import 'package:to_do_list/app/pages/taskList/task_list_page.dart';
+import 'package:to_do_list/app/pages/components/shape.dart';
 
 class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: Column(
         children: [
@@ -15,17 +19,15 @@ class SplashPage extends StatelessWidget {
               Shape()
             ],
           ),
-          const SizedBox(
-            height: 80,
+          SizedBox( height: size.width > size.height ? 80 : 50),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 80),
+            child: Image.asset(
+              'assets/images/onboarding-image.png',
+              width: double.infinity,
+            ),
           ),
-          Image.asset(
-            'assets/images/onboarding-image.png',
-            width: 180,
-            height: 168,
-          ),
-          const SizedBox(
-            height: 99,
-          ),
+          SizedBox( height: size.width > size.height ? 99 : 70,),
           const TitlePricipal(text: 'Lista de Tareas'),
 
           const SizedBox(
@@ -45,7 +47,7 @@ class SplashPage extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .bodyText2!
-                    .copyWith(fontWeight: FontWeight.w400, fontSize: 15),
+                    .copyWith(fontWeight: FontWeight.w400, fontSize: 14),
               ),
             ),
           ),

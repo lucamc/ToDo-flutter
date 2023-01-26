@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list/app/view/home/home_page.dart';
-import 'package:to_do_list/app/view/splash/splash_page.dart';
-import 'package:to_do_list/app/view/task_list/task_list_page.dart';
+import 'package:to_do_list/app/pages/home/home_page.dart';
+import 'package:to_do_list/app/pages/splash/splash_page.dart';
+import 'package:to_do_list/app/pages/taskList/task_list_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
               displayColor: textColor,
             ),
       ),
-      home: SplashPage(),
+      home: TaskListPage(),
     );
   }
 }
